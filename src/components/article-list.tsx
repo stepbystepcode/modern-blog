@@ -46,8 +46,8 @@ const ArticleList = () => {
                                 <span className="text-sm">stepbystep</span>
                                 </div>
                                 <div className="text-gray-500 flex gap-5 scale-75">
-                                    <div className="flex"><Eye />{item.watch}</div>
-                                    <div className="flex"><MessageCircleMore />{item.comment}</div>
+                                    <div className="flex max-[767px]:hidden"><Eye />{item.watch}</div>
+                                    <div className="flex max-[767px]:hidden"><MessageCircleMore />{item.comment}</div>
                                     <div className="flex"><ThumbsUp />{item.like}</div>
                                 </div>
                             </div>

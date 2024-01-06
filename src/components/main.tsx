@@ -6,7 +6,7 @@ import ArticleList from "@/components/article-list";
 const Main=()=>{
 
     return(
-        <main className="col-span-2 max-[1200px]:col-span-3 max-[1200px]:mx-12">
+        <main className="col-span-2 max-[1200px]:col-span-3 ">
             <div className="grid grid-cols-6 gap-4 w-full">
                <CarouselContent/>
                <NavBar/>

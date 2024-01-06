@@ -21,7 +21,7 @@ const Header = () => {
     ]
     return (
         <header>
-            <div className="container mx-auto shadow-lg fixed bg-white z-50">
+            <div className="w-full px-10 mx-auto shadow-lg fixed left-0 bg-white z-50">
                 <div className="flex justify-between items-center h-[4rem]">
                     <div className="flex flex-row gap-4">
                         <div className="flex items-center">
