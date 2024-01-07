@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { getPostList} from "@/app/util";
 import {
     Pagination,
     PaginationContent,
