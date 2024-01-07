@@ -11,7 +11,7 @@ const NavBar = () => {
                 return (
                     <div key={index}
                          style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/items/${index + 1}.jpg)`}}
-                         className="max-[1000px]:col-span-2 flex backdrop-opacity-5 text-white justify-center items-center rounded-lg bg-center bg-cover h-14">
+                         className="cursor-pointer max-[1000px]:col-span-2 flex backdrop-opacity-5 text-white justify-center items-center rounded-lg bg-center bg-cover h-14">
                         {item}
                     </div>
                 )

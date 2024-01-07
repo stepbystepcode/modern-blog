@@ -98,7 +98,7 @@ const Footer = () => {
                                             onClick={() => {
                                                 window.open(link.url);
                                             }}
-                                            className="p-2 flex justify-center items-center w-[40px] h-[40px] dark:bg-[#3d3e3e] text-gray-500 dark:hover:text-white hover:text-gray-900 rounded-full bg-gray-100"
+                                            className="p-2 flex justify-center items-center cursor-pointer w-[40px] h-[40px] dark:bg-[#3d3e3e] text-gray-500 dark:hover:text-white hover:text-gray-900 rounded-full bg-gray-100"
                                         >
                                             {link.icon}
                                         </div>

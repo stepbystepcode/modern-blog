@@ -104,14 +104,14 @@ const Header = () => {
                             </div>
                         </div>
                         <div className="flex items-center gap-4">
-                            <div onClick={toggleDarkMode} className={`${isDarkMode ? 'light' : 'dark'} rounded-full dark:bg-transparent p-2 hover:bg-gray-100 dark:hover:bg-black`}>
+                            <div onClick={toggleDarkMode} className={`${isDarkMode ? 'light' : 'dark'} cursor-pointer rounded-full dark:bg-transparent p-2 hover:bg-gray-100 dark:hover:bg-black`}>
                             <Lightbulb />
                             </div> 
-                            <div onClick={()=>setOpen(true)} className={`${isDarkMode ? 'light' : 'dark'} rounded-full dark:bg-transparent p-2 hover:bg-gray-100 dark:hover:bg-black`}>
+                            <div onClick={()=>setOpen(true)} className={`${isDarkMode ? 'light' : 'dark'} cursor-pointer rounded-full dark:bg-transparent p-2 hover:bg-gray-100 dark:hover:bg-black`}>
                             <Search />
                             </div>
                             <SheetTrigger asChild>
-                                <div className="min-[1200px]:hidden rounded-full hover:bg-gray-100 dark:hover:bg-black p-2">
+                                <div className="min-[1200px]:hidden rounded-full cursor-pointer  hover:bg-gray-100 dark:hover:bg-black p-2">
 
                                     <AlignJustify />
                                 </div>

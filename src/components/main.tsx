@@ -11,7 +11,7 @@ const Main=()=>{
                <CarouselContent/>
                <NavBar/>
                 <CategoriesBar/>
-                <div className="rounded-lg col-span-6">
+                <div className="rounded-lg col-span-6 cursor-pointer ">
                     <Image src="/banner.jpg" alt="banner" width={1000} height={100} />
                 </div>
                 <ArticleList/>
