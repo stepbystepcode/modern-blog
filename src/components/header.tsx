@@ -103,7 +103,7 @@ const Header = () => {
                                 })}
                             </div>
                         </div>
-                        <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-4 max-[576px]:gap-0">
                             <div onClick={toggleDarkMode} className={`${isDarkMode ? 'light' : 'dark'} cursor-pointer rounded-full dark:bg-transparent p-2 hover:bg-gray-100 dark:hover:bg-black`}>
                             <Lightbulb />
                             </div> 
@@ -116,7 +116,7 @@ const Header = () => {
                                     <AlignJustify />
                                 </div>
                             </SheetTrigger>
-                            <Avatar>
+                            <Avatar className="max-[576px]:ml-1">
                                 <AvatarImage src="/avatar.jpeg" alt="@shadcn" />
                                 <AvatarFallback>头像</AvatarFallback>
                             </Avatar>
