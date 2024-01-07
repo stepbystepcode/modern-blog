@@ -27,7 +27,7 @@ const Markdown: React.FC<MarkdownProps> = ({ content }) => {
   return (
     <div className='blog'>
       <ReactMarkdown
-        children={content}
+
         remarkPlugins={[remarkGfm]}
         components={{
           // @ts-ignore
@@ -36,7 +36,6 @@ const Markdown: React.FC<MarkdownProps> = ({ content }) => {
             return !inline && match ? (
               <div className='relative'>
                 <SyntaxHighlighter
-                  children={String(children).replace(/\n$/, '')}
                   // @ts-ignore
                   style={dracula}
                   language={match[1]}
@@ -45,7 +44,7 @@ const Markdown: React.FC<MarkdownProps> = ({ content }) => {
                   lineNumberContainerStyle={{ paddingRight: '10px' }}
                   lineNumberStyle={{ color: '#999' }}
                   {...props}
-                />
+                >{String(children).replace(/\n$/, '')}</SyntaxHighlighter>
                 <CopyToClipboard text={String(children)} onCopy={handleCopy}>
                   <button
                     className='absolute top-2 right-2 bg-gray-400 bg-opacity-50 text-white rounded-md w-8 h-8 flex justify-center items-center cursor-pointer'
@@ -61,7 +60,7 @@ const Markdown: React.FC<MarkdownProps> = ({ content }) => {
             );
           },
         }}
-      />
+      >{content}</ReactMarkdown>
     </div>
   );
 };
