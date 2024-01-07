@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import {
     Pagination,
@@ -11,6 +12,7 @@ import {
 
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Eye, MessageCircleMore,ThumbsUp} from "lucide-react";
+
 const ArticleList = () => {
     const list = [
         {
@@ -25,7 +27,6 @@ const ArticleList = () => {
     ]
     return (
         <>
-
             {Array(8).fill(list[0])
                 .map((item, index) => {
                 return (
@@ -77,3 +78,16 @@ const ArticleList = () => {
     )
 }
 export default ArticleList;
+export async function getServerSideProps() {
+    interface Post {
+        id: number;
+        title: string;
+        content: string;
+        author_id: number;
+        views: number;
+        likes: number;
+        tags: string[];
+        created_at: string;
+    }
+
+}
