@@ -30,13 +30,13 @@ const ArticleList = () => {
                 .map((item, index) => {
                 return (
                     <div key={index} className="flex gap-3 bg-white rounded-lg col-span-6 p-4">
-                        <div className="w-[13rem] h-[9rem] relative">
+                        <div className="aspect-[220/147] h-[9rem] relative">
                         <Image className="rounded-lg" src={item.image} alt={item.title} layout='fill'
                             objectFit='cover'  />
                         </div>
-                        <div className="w-[75%]">
-                        <div className="font-bold mb-5">{item.title}</div>
-                        <div className="font-light line-clamp-2">{item.overview}</div>
+                        <div className="w-[75%] flex flex-col justify-between">
+                        <div className="font-bold mb-3 line-clamp-2">{item.title}</div>
+                        <div className="font-light line-clamp-2 max-[768px]:hidden">{item.overview}</div>
                             <div className="mt-3 flex items-center justify-between">
                                 <div className="flex gap-1">
                                 <Avatar className="w-6 h-6">

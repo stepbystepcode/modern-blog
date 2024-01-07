@@ -3,6 +3,7 @@ import {
     AvatarFallback,
     AvatarImage,
 } from "@/components/ui/avatar"
+import Link from 'next/link'
 
 const Header = () => {
     const menu = [
@@ -25,7 +26,8 @@ const Header = () => {
                 <div className="flex justify-between items-center h-[4rem]">
                     <div className="flex flex-row gap-4">
                         <div className="flex items-center">
-                            <h1 className="font-bold text-2xl">StepbyStep</h1>
+                            <Link href="/">
+                            <h1 className="text-[#007bff] font-bold text-2xl my-auto">StepbyStep</h1></Link>
                         </div>
                         <div className="flex items-center">
                             {menu.map((item, index) => {
