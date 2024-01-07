@@ -15,14 +15,14 @@ const HotArticle = () => {
         }
     ]
     return (
-        <div className="rounded-xl bg-white p-4">
+        <div className="rounded-xl bg-white dark:bg-[#242525] p-4">
             <div className="flex gap-1">
             <Trophy className="text-blue-600" />
         <span className="font-bold text-xl">热门文章</span>
             </div>
             {Array(3).fill(list[0]).map((item, index) => {
                 return (
-                    <div key={index} className="flex gap-3 bg-white rounded-lg col-span-6 p-4">
+                    <div key={index} className="flex gap-3 bg-white dark:bg-[#242525] rounded-lg col-span-6 p-4">
                         <div className="w-[75%]">
                             <div className="font-extralight line-clamp-2 mb-5">{item.title}</div>
                             <span className="text-md text-gray-400" style={{fontFamily:'Rough Motion'}}>{item.date}</span>

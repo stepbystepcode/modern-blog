@@ -29,13 +29,13 @@ const ArticleList = () => {
             {Array(8).fill(list[0])
                 .map((item, index) => {
                 return (
-                    <div key={index} className="flex gap-3 bg-white rounded-lg col-span-6 p-4">
+                    <div key={index} className="flex gap-3 bg-white dark:bg-[#242525] rounded-lg col-span-6 p-4">
                         <div className="aspect-[220/147] h-[9rem] relative">
                         <Image className="rounded-lg" src={item.image} alt={item.title} layout='fill'
                             objectFit='cover'  />
                         </div>
-                        <div className="w-[75%] flex flex-col justify-between">
-                        <div className="font-bold mb-3 line-clamp-2">{item.title}</div>
+                        <div className="w-[75%] pt-1 flex flex-col justify-between">
+                        <div className="font-bold mb-3 line-clamp-2 hover:text-blue-600">{item.title}</div>
                         <div className="font-light line-clamp-2 max-[768px]:hidden">{item.overview}</div>
                             <div className="mt-3 flex items-center justify-between">
                                 <div className="flex gap-1">
@@ -45,10 +45,10 @@ const ArticleList = () => {
                                 </Avatar>
                                 <span className="text-sm">stepbystep</span>
                                 </div>
-                                <div className="text-gray-500 flex gap-5 scale-75">
-                                    <div className="flex max-[767px]:hidden"><Eye />{item.watch}</div>
-                                    <div className="flex max-[767px]:hidden"><MessageCircleMore />{item.comment}</div>
-                                    <div className="flex"><ThumbsUp />{item.like}</div>
+                                <div className="text-gray-500 flex gap-5 scale-75" style={{fontFamily:'Rough Motion'}}>
+                                    <div className="flex max-[767px]:hidden gap-1"><Eye />{item.watch}</div>
+                                    <div className="flex max-[767px]:hidden gap-1"><MessageCircleMore />{item.comment}</div>
+                                    <div className="flex text-black gap-1"><ThumbsUp />{item.like}</div>
                                 </div>
                             </div>
                         </div>

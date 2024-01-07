@@ -3,7 +3,8 @@ import {Inter} from 'next/font/google'
 import './globals.css'
 import Header from '../components/header'
 import Footer from "@/components/footer";
-
+import { Toaster } from "@/components/ui/sonner"
+import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({subsets: ['latin']})
 
 export const metadata: Metadata = {
@@ -25,10 +26,17 @@ export default function RootLayout({
     return (
         <html lang="en">
 
-        <body className={`${inter.className} bg-[#f6f6fa]`}>
+        <body className={`${inter.className} bg-[#f6f6fa] dark:bg-[#18191A]`}>
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
         <Header/>
         {children}
-        <Footer/>
+        <Footer/><Toaster />
+        </ThemeProvider>
         </body>
         </html>
     )

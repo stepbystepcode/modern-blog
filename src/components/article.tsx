@@ -39,7 +39,7 @@ function sum(a, b) {
 
 `;
     return (
-        <div className="col-span-2 max-[1200px]:col-span-3 bg-white rounded-lg p-5">
+        <div className="col-span-2 max-[1200px]:col-span-3 bg-white dark:bg-[#242525] rounded-lg p-5">
             <div>
                 <h1 className="text-4xl font-bold text-gray-800">Article</h1>
                 <Separator className="my-5 h-[1px] bg-gray-100" />

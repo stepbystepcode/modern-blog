@@ -6,6 +6,7 @@ import remarkGfm from 'remark-gfm';
 import { Clipboard, Check } from 'lucide-react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import "../components/default.css"
+import { toast } from "sonner"
 interface MarkdownProps {
   content: string;
 }
@@ -14,9 +15,13 @@ const Markdown: React.FC<MarkdownProps> = ({ content }) => {
 
   const handleCopy = () => {
     setCopied(true);
+    toast("复制成功", {
+      description: "如果需要引用，请说明来源",
+    })
     setTimeout(() => {
       setCopied(false);
     }, 1000);
+
   };
 
   return (
