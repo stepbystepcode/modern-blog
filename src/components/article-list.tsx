@@ -46,7 +46,7 @@ const ArticleList = async () => {
                 return (
                     <div key={index} className="flex gap-3 bg-white dark:bg-[#242525] rounded-lg col-span-6 p-4">
                         <div className="aspect-[220/147] max-[576px]:h-[calc(100vw/4)] h-[9rem]  relative">
-                        <Image className="rounded-lg cursor-pointer" src={`/img/${item.id}`} alt={item.title} layout='fill'
+                        <Image className="rounded-lg cursor-pointer" src={`https://vyxjlbfzsilnggewbzff.supabase.co/storage/v1/object/public/blog/img/post-cover/${item.id}.jpg`} alt={item.title} layout='fill'
                             objectFit='cover'  />
                         </div>
                         <div className="w-[75%] pt-1 flex flex-col justify-between">
