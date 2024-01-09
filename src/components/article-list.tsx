@@ -46,8 +46,8 @@ const ArticleList = async () => {
                 return (
                     <div key={index} className="flex gap-3 bg-white dark:bg-[#242525] rounded-lg col-span-6 p-4">
                         <div className="aspect-[220/147] max-[576px]:h-[calc(100vw/4)] h-[9rem]  relative">
-                        <Image className="rounded-lg cursor-pointer" src={`https://vyxjlbfzsilnggewbzff.supabase.co/storage/v1/object/public/blog/img/post-cover/${item.id}.jpg`} alt={item.title} layout='fill'
-                            objectFit='cover'  />
+                        <Image className="rounded-lg cursor-pointer" src={`https://vyxjlbfzsilnggewbzff.supabase.co/storage/v1/object/public/blog/img/post-cover/${item.id}.jpg`} alt={item.title} sizes='auto'
+                            fill  />
                         </div>
                         <div className="w-[75%] pt-1 flex flex-col justify-between">
                             <div className="font-bold line-clamp-2 hover:text-blue-600 cursor-pointer"><Link href={`/post/${item.id}`}>{item.title}</Link></div>
@@ -58,7 +58,7 @@ const ArticleList = async () => {
                                     <AvatarImage src="/avatar.jpeg" alt="@shadcn"/>
                                     <AvatarFallback>头像</AvatarFallback>
                                 </Avatar>
-                                <span className="text-sm cursor-pointer hover:text-blue-600">stepbystep</span>
+                                <span className="text-sm cursor-pointer hover:text-blue-600">StepbyStep</span>
                                 </div>
                                 <div className="text-gray-500 flex gap-5 scale-75" style={{fontFamily:'Rough Motion'}}>
                                     <div className="flex max-[767px]:hidden gap-1"><Eye />{item.views}</div>

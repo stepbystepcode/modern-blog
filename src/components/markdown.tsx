@@ -1,12 +1,12 @@
 "use client";
 import React, { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { Prism as SyntaxHighlighter, SyntaxHighlighterProps } from 'react-syntax-highlighter';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import remarkGfm from 'remark-gfm';
 import { Clipboard, Check } from 'lucide-react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import "../components/default.css"
+import "@/assets/default.css"
 import { toast } from "sonner"
 interface MarkdownProps {
   content: string;

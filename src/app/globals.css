@@ -1,4 +1,10 @@
-@import url('https://fonts.cdnfonts.com/css/rough-motion');
+@font-face {
+  font-family: 'Rough Motion';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Rough Motion'), url('../assets/RoughMotion.woff2') format('woff2');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

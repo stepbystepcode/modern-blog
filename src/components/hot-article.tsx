@@ -28,8 +28,8 @@ const HotArticle = () => {
                             <span className="text-md text-gray-400" style={{fontFamily:'Rough Motion'}}>{item.date}</span>
                         </div>
                         <div style={{width: '13rem', height: '6rem', position: 'relative'}}>
-                            <Image className="rounded-lg" src={item.image} alt={item.title} layout='fill'
-                                   objectFit='cover'  />
+                            <Image className="rounded-lg object-cover" src={item.image} alt={item.title} fill
+                              sizes="auto"        />
                         </div>
                     </div>
                 )
