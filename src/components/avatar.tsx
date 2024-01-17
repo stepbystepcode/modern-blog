@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '../lib/supabaseClient'
-import { Button } from "@/components/ui/button"
 export default function Avatar({ url, size, onUpload }:{ url: string, size: number, onUpload: any }) {
     const [avatarUrl, setAvatarUrl] = useState<string>('')
     const [uploading, setUploading] = useState(false)
@@ -55,17 +54,17 @@ export default function Avatar({ url, size, onUpload }:{ url: string, size: numb
                 <img
                     src={avatarUrl}
                     alt="Avatar"
-                    className="avatar image"
-                    style={{ height: size, width: size }}
+                    className="rounded-full m-8 shadow-xl"
+                   
                 />
             ) : (
-                <div className="avatar no-image" style={{ height: size, width: size }} />
+                <div style={{ height: size, width: size }} />
             )}
-            <div style={{ width: size }}>
+            <div>
                 <label className="button primary block" htmlFor="single">
-                    <Button>
+                    <div className=''>
                     {uploading ? '正在上传 ...' : '上传头像'}
-                    </Button></label>
+                    </div></label>
                 <input
                     style={{
                         visibility: 'hidden',
