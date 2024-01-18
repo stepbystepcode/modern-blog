@@ -1,8 +1,11 @@
 import Main from '../components/main'
 import Aside from '../components/aside'
-
+import Header from '@/components/header'
+import Footer from '@/components/footer'
 export default function Home() {
   return (
+    <>
+    <Header />
       <div className="grid grid-cols-3 py-24 p-4 mx-auto w-[100%] gap-[1rem] 
       min-[576px]:max-w-[540px] 
       min-[768px]:max-w-[720px] 
@@ -12,5 +15,7 @@ export default function Home() {
       <Main />
       <Aside />
       </div>
+      <Footer />
+      </>
   )
 }
