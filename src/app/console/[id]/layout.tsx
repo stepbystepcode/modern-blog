@@ -15,7 +15,7 @@ const Admin = (
     }: PageProps
 ) => {
     return (
-        <div className='h-screen flex'>
+        <div className='h-screen flex bg-[#eff4f9]'>
             <AdminAside />
             <div>
                 <AdminHeader />
