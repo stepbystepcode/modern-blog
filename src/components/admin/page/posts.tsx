@@ -25,6 +25,7 @@ import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Separator} from "@/components/ui/separator";
 import {Button} from "@/components/ui/button";
 import Link from "next/link";
+import {deletePosts} from "@/app/util";
 
 const PostsPage: React.FC = () => {
     const handleEdit = () => {
@@ -38,8 +39,10 @@ const PostsPage: React.FC = () => {
     };
 
     const handleDelete = () => {
-        // 处理删除操作
-        console.log('Delete clicked');
+        if(list)
+        deletePosts(list.filter((_, index) => selectedItems[index])
+            .map(({ id }) => id))
+
     };
     const statusName = (type:number) => type?'已发布':'草稿';
     const [selectType,setSelectType] = useState<string>('全部');
@@ -78,7 +81,7 @@ const PostsPage: React.FC = () => {
                                onCheckedChange={handleSelectAllChange}/>
                     {!selectedItems.some((item) => item) &&<Input className="max-w-52"/>}
                     <Link href={"/console/create"} ><Button>新建文章</Button></Link>
-                    {selectedItems.some((item) => item) && <Button className="bg-red-800">删除</Button>}
+                    {selectedItems.some((item) => item) && <Button onClick={handleDelete} className="bg-red-800">删除</Button>}
                 </div>
                 <div className="mb-4 mx-4">
                     <Select defaultValue="全部" value={selectType} onValueChange={(val)=>setSelectType(val)}>

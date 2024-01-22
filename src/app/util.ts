@@ -1,5 +1,6 @@
 import { cache } from 'react'
 import {supabase} from "@/lib/supabaseClient";
+import {toast} from "sonner";
 export const getPost = cache(async (id: string) => {
     const { data } = await supabase.from('posts').select('*').eq('id', id).single();
     return data
@@ -24,4 +25,15 @@ await supabase
     .from('posts')
     .insert(val)
     .select()
+}
+export const deletePosts = (val: (number | undefined)[]) => {
+    val?.map(async (i)=>{
+        const {error}=await supabase
+            .from('posts')
+            .delete()
+            .eq('id', i)
+        if(error) toast("error")
+        else toast("删除成功")
+        }
+    )
 }
