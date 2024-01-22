@@ -17,7 +17,7 @@ const AdminAside = () => {
                         navList.map((item, index) => {
                             return (
                                 <Link href={item.href} key={index}>
-                                <div className={`flex hover:bg-[#f3f4f6] p-1 rounded-sm ${pathname.toString()===item.href?'bg-[#f3f4f6]':''}`}>
+                                <div className={`flex hover:bg-[#f3f4f6] p-1 rounded-sm ${pathname.toString()===item.href?'bg-[#f3f4f6] border-l-4 border-black':''}`}>
                                     <span className='scale-75'>{item.icon}</span>
                                     <span className='ml-2'>{item.name}</span>
                                 </div>

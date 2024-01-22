@@ -77,6 +77,7 @@ const PostsPage: React.FC = () => {
                     <Checkbox  checked={selectAll}
                                onCheckedChange={handleSelectAllChange}/>
                     {!selectedItems.some((item) => item) &&<Input className="max-w-52"/>}
+                    <Link href={"/console/create"} ><Button>新建文章</Button></Link>
                     {selectedItems.some((item) => item) && <Button className="bg-red-800">删除</Button>}
                 </div>
                 <div className="mb-4 mx-4">

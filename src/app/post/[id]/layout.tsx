@@ -1,6 +1,8 @@
 import Aside from '../../../components/aside'
 import {getPost} from "@/app/util";
 import React from "react";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 interface PageProps {
     params: {
         id: string
@@ -15,6 +17,8 @@ export default async function Page({
                              }: PageProps) {
     const item = await getPost(id);
     return (
+        <>
+        <Header />
         <div className="grid grid-cols-3 py-24 p-4 mx-auto w-[100%] gap-[1rem]
       min-[576px]:max-w-[540px]
       min-[768px]:max-w-[720px]
@@ -24,5 +28,7 @@ export default async function Page({
             {children}
             <Aside/>
         </div>
+    <Footer />
+    </>
     )
 }

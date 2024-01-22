@@ -26,6 +26,7 @@
     "@radix-ui/react-toast": "^1.1.5",
     "@supabase/supabase-js": "^2.39.2",
     "@tanstack/react-table": "^8.11.7",
+    "@uiw/react-md-editor": "^4.0.3",
     "@vercel/analytics": "^1.1.2",
     "character-entities": "^2.0.2",
     "class-variance-authority": "^0.7.0",

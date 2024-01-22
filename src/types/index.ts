@@ -1,11 +1,11 @@
 interface Post {
     type: number;
-    id: number;
+    id?: number;
     title: string;
     content: string;
     views: number;
     likes: number;
     comments: number;
-    created_at: string;
+    created_at?: string;
     tags: string[];
 }

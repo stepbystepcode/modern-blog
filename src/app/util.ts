@@ -14,8 +14,14 @@ export const getPostList = cache(async () => {
         content: post.content,
         comments: post.comments,
         type: post.type,
-        created_at: post.created_at,
         tags: post.tags
     })) : [];
     return posts
 })
+
+export const createPost = async (val:Post)=>{
+await supabase
+    .from('posts')
+    .insert(val)
+    .select()
+}
