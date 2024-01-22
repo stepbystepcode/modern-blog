@@ -1,6 +1,5 @@
 import DashboardPage from './page/dashboard'
 import PostsPage from './page/posts'
-import PagesPage from './page/pages'
 import CommentsPage from './page/comments'
 import FilesPage from './page/files'
 import PhotosPage from './page/photos'
@@ -13,7 +12,7 @@ import PluginsPage from './page/plugin'
 import UsersPage from './page/users'
 import SettingsPage from './page/settings'
 import InfoPage from './page/info'
-import { GaugeCircle, StickyNote, BookText, MessageCircleMore, File, Image, Link as LinkIcon, Clock, FileText, Palette, Menu, Plug, User, Settings, Info } from 'lucide-react'
+import { GaugeCircle, BookText, MessageCircleMore, File, Image, Link as LinkIcon, Clock, FileText, Palette, Menu, Plug, User, Settings, Info } from 'lucide-react'
     export const navList = [
         {
             name: "仪表盘",
@@ -26,12 +25,6 @@ import { GaugeCircle, StickyNote, BookText, MessageCircleMore, File, Image, Link
             href: "/console/posts",
             icon: <FileText />,
             content: <PostsPage />
-        },
-        {
-            name: "页面",
-            href: "/console/pages",
-            icon: <StickyNote />,
-            content: <PagesPage />
         },
         {
             name: "评论",

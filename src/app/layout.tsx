@@ -3,6 +3,7 @@ import {Inter} from 'next/font/google'
 import './globals.css'
 import { Toaster } from "@/components/ui/sonner"
 import { ThemeProvider } from "@/components/theme-provider"
+import Script from "next/script";
 const inter = Inter({subsets: ['latin']})
 
 export const metadata: Metadata = {
@@ -23,6 +24,8 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" className="light" style={{colorScheme: "light"}}>
+            <Script defer src="https://eu.umami.is/script.js"
+                    data-website-id="c1c14533-41c6-400b-ba8d-7c7356e85a1d"/>
 
         <body className={`${inter.className} bg-[#f6f6fa] dark:bg-[#18191A]`}>
         <ThemeProvider
@@ -30,10 +33,10 @@ export default function RootLayout({
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
-          >
-        
-        {children}
-        <Toaster />
+        >
+
+            {children}
+            <Toaster/>
         </ThemeProvider>
         </body>
         </html>
